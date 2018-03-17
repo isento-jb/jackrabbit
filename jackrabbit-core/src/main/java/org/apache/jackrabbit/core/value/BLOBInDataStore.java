@@ -132,6 +132,7 @@ class BLOBInDataStore extends BLOBFileValue implements ReferenceBinary {
         DataRecord rec = store.addRecord(in);
         DataIdentifier identifier = rec.getIdentifier();
         if (auditLogger.isDebugEnabled()) {
+        	auditLogger.debug("Juergen: ");
             auditLogger.debug("{} ({})", identifier, rec.getLength());
         }
         return new BLOBInDataStore(store, identifier);
